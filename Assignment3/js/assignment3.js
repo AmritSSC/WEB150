@@ -16,7 +16,7 @@ function Books(name, bookread){
 
 //create new instances of hotel objects
 var Book1 = new Books("Johnathan", 1);
-var Book2 = new Books("The Powr of One", 4);
+var Book2 = new Books("The Power of One", 4);
 var Book3 = new Books("Pride and Prejudice", 0);
 
 //update html
