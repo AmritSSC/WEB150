@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Number to Grade Converter</title>
+
+</head>
+
+<body>
+    <script>
+        // ask for  marks:
+        var numGrade = prompt("Enter marks earned: ");        
+        num1 = parseFloat(numGrade);
+        //define gradevariable:
+        var grade = "Placehold";
+        
+  //      alert(num1);
+        // go through score vs grade assignment
+        if (num1 <=100 && num1 >= 88 )
+            grade = "A";
+        else if (num1 <88 && num1 >= 80 )
+            grade = "B";
+        else if (num1 < 80 && num1 >= 68 )
+            grade = "C";
+        else if (num1 < 68 && num1 >= 60 )
+            grade = "D";
+        else if (num1 < 60 && num1 >= 0 )
+            grade = "F";
+        else    
+            grade = "Invalid score"
+
+        //output resultant conversion.
+        alert("Number Grade = " + num1 + "\nLetter Grade = " + grade)    
+    </script>
+
+</body>
+</html>
