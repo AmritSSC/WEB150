@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WEB150 Assignment 5 Online</title>
+
+</head>
+
+<body>
+        <h1>The Miles Per Gallon Application</h1>
+    <div>
+        <p id>
+                <span id = "mD1">Miles driven = </span> <br />
+                <span id = "gU1">Gallons of Gas = </span> <br />
+        </p>
+        <p id = "mpg1">Miles per gallon = </p>
+          
+        <p>Thanks for using our MPG application! </p>
+
+    </div>
+
+    <script>
+        // ask for  marks:
+        var miles1 = prompt("Enter miles driven: ");        
+        num1 = parseFloat(miles1);
+        var gas1 = prompt("Enter gallons of gas used: ");        
+        num2 = parseFloat(gas1);
+        //define grade variable:
+        var efficiency1 = parseInt(num1 / num2);
+
+     
+        var elMiles2 = document.getElementById('mD1');
+        var elGas2 = document.getElementById('gU1');
+        var elEfficiency2 = document.getElementById('mpg1');
+
+       
+        elMiles2.textContent = " Miles driven = "+ num1;
+        elGas2.textContent = " Gallons of Gas = " + num2;
+        elEfficiency2.textContent = " Miles per gallon = " + efficiency1;
+    </script>
+
+</body>
+</html>
