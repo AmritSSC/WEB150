@@ -28,7 +28,7 @@
         var gas1 = prompt("Enter gallons of gas used: ");        
         num2 = parseFloat(gas1);
         //define grade variable:
-        var efficiency1 = parseInt(num1 / num2);
+        var efficiency1 = parseFloat(num1 / num2, 2).toFixed(2);
 
      
         var elMiles2 = document.getElementById('mD1');
