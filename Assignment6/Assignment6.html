@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test Score Average</title>
+
+</head>
+
+<body>
+    <script>
+        // define variables
+        var num1 = 0;
+        var i = 0;
+        var gradeTotal = 0;
+        
+        // ask for  marks, check it is not end signal of 999:
+        while (num1 !== 999)
+        {              
+            var numGrade = prompt("Enter test score \n Or enter 999 to end entries ");        
+            num1 = parseInt(numGrade);
+            //create sum if value not end signal value of 999
+            if (num1 != 999)
+            {
+                gradeTotal += num1;
+                i++; // keep track of number of entries 
+            }
+        }
+
+        // calculate average
+        var gradeAvg = parseFloat(gradeTotal / i ).toFixed(2);
+        
+        //Issue average score alert:
+        alert("Average Score is " + gradeAvg);    
+    </script>
+
+</body>
+</html>
