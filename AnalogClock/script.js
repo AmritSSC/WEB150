@@ -31,6 +31,6 @@ function runTheClock()
     SECONDe.transform = "rotate(" + secPosition + "deg)";
 }
 
-var interval = setInterval(runTheClock, 1000);
-
+//var interval = setInterval(runTheClock, 1000);
+setInterval(runTheClock, 1000);
 
