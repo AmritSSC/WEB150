@@ -12,15 +12,14 @@
         <p id="one">Inverter</p>
         <p id="two">Solar Generator</p>
         <p id="three">Converter</p>
-        <p id="four">IoT Devices</p>
+        <p id="four">Wind Generator</p>
     </center>
     </div>
-    <script>
-        
-        // 1. Add new item to list:
+    <script>        
+// 1. Add new item to list:
         var newItem = document.createElement('p');
         //create a text node for new element
-        var newProduct = document.createTextNode('Wind Generator');
+        var newProduct = document.createTextNode('IoT Devices');
         newItem.appendChild(newProduct);
         //get reference to ul where new list item is to be added
         var position = document.getElementsByTagName('center')[0];
@@ -28,22 +27,23 @@
         position.appendChild(newProduct);
 
 
-        //2. Append to text:
-        //3. Add get element by Tag Id
+//2. Append to text:
+//3. Add get element by Tag Id
         var productUpdate = document.getElementsByTagName("p");
         var addText = document.createTextNode(" - Automotive and Residential");
         productUpdate[2].appendChild(addText);
 
-        //4. Add space between each component:
+//4. Use child function to update list:
+    
         var startItem = document.getElementsByTagName('center')[0];
         var firstItem = startItem.firstChild;
         var lastItem = startItem.lastChild;
         
-        var replaceFirst = firstItem.replace( '<font size="5">' + firstItem + '</font>');
-        var replaceLast = lastItem.replace('<font color="red">' + lastItem + '</font>');
+        var replaceFirst = "Some Awesome Stuff below: ";
+        var replaceLast = "Be the first to use these " + lastItem.nodeValue + " that are state of the art!!";
         
-        document.firstItem.innerHTML = replaceFirst;
-        document.lastItem.innerHTML = replaceLast;
+        firstItem.nodeValue= replaceFirst;
+        lastItem.nodeValue = replaceLast;
 
     </script>
     
