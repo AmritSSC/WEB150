@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>WEB150: Assignment 9</title>     
+    </head>
+    
+    <body>
+        <!--Create form inputs and output-->
+        <form action="/action_page.php" onsubmit="getResult()">
+            <label for="miles">Enter miles driven:</label> <br />
+            <input type="number" id="miles"/><br><br>
+            
+            <label for="gas">Enter gallons of gas used:</label> <br />
+            <input type="number" id="gas" /><br><br>
+            
+            <label for="mpg">Miles Per Gallon:</label><br>
+            <input type="number" id="mpg"  disabled /><br> <br />
+
+            <input type="submit" value="Calculate MPG">
+          </form>
+    
+          <script>
+                // define form response
+                function getResult()
+                {
+                    //get input variables
+                    var milesDriven = document.getElementById("miles").value;
+                    var gallonsUsed = document.getElementById("gas").value;
+                    //calculate output variables:    
+                    var milesPerGallon = Math.floor(milesDriven / gallonsUsed);
+                    
+                    // set output variable to output box, always rounding to floor:
+                    document.getElementById("mpg").value = milesPerGallon;
+                }
+          </script>
+
+    </body>
+</html>
