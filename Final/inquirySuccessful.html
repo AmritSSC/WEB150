@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <title>Form Submission</title>
+</head>
+
+<body>
+    <center>
+        <h1>Your Inquiry has been received</h1>
+        <br /><br />
+        <label for="inquiryContent">Inquiry Details</label><br />
+        <textarea id="inquiryContent" rows="5" cols="50" disabled></textarea><br />
+        <br />
+
+    </center>
+    <script>
+        //            window.onload = alert(localStorage.getItem("inquiryDetails"));
+        var inquirtyData = localStorage.getItem("inquiryDetails");
+        document.getElementById("inquiryContent").innerHTML = inquirtyData;
+        // for (var i; i < inquirtyData.length; i++) {
+        //     document.getElementById("inquiryContent").innerHTML += inquirtyData[i];
+        // }
+        // document.getElementById("custRequest").innerHTML = localStorage.getItem("serviceSelect1");
+        // document.getElementById("custName").innerHTML = localStorage.getItem("customerName1");
+        // document.getElementById("custEmail").innerHTML = localStorage.getItem("custEmail1");
+        // document.getElementById("custMessage").innerHTML = localStorage.getItem("custMessage1");
+    </script>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script src="" async defer></script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title class="center">HomePage</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="jquery-3.0.0.js"></script>
+</head>
+
+<body class="center">
+    <h1>Welcome to Amrit's Electrical Services Website</h1>
+
+    <p>We are here to provide electrical services, whether it is consumer design consulting, prototype designing, or troubleshooting.</p>
+    <p>If you like,lessons on the basics of electrical design for you to do yourself!</p>
+    <br/><br/><br/>
+
+    <div>
+        <img id="myImg" src="mypic.jpg" alt="Nothing to see here today." width="25%" height="25%">/>
+    </div>
+
+    <script>
+        var siteImage = [];
+        siteImage[0] = "mypic.jpg";
+        siteImage[1] = "mypic2.jpg";
+
+        var i = 0;
+
+        var updatePic = setInterval(changeImg, 4200);
+
+        function changeImg() {
+
+            if (i < siteImage.length - 1) {
+                i++;
+            } else {
+                i = 0;
+            }
+            document.getElementById("myImg").setAttribute('src', siteImage[i])
+        }
+    </script>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
