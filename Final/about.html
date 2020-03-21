@@ -37,7 +37,7 @@
             Here is some a semblence of my experience:
         </p>
 
-        <embed src="myResume.pdf" width="800px" height="2100px" />
+        <embed id="pdfWindow" src="the_little_prince.pdf" width="800px" height="2100px" />
 
     </div>
 
@@ -53,5 +53,29 @@
     </script>
     <!-- Footer end-->
 </body>
+<script type="text/javascript">
+    $("document").ready(function() {
+        //use the find function to locate content within particular elements
+        $("#pdfWindow").css("border", "7px solid black");
+
+    });
+
+    //use the each function to iterate over a set of elements and operate on them
+    var leftmargin = 0;
+    var colorSelect = 1;
+    var colorScheme = ["blue", "orange", "green", "red", "gold", "purple", "springgreen"];
+    var timer1 = setInterval(changeMargin, 1000);
+
+    function changeMargin() {
+
+        if (colorSelect < 7)
+            colorSelect++;
+        else colorSelect = 1;
+
+
+        $("#pdfWindow").css("border", "7px solid " + colorScheme[colorSelect - 1]);
+
+    }
+</script>
 
 </html>
