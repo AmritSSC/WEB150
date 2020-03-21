@@ -9,6 +9,23 @@
     <link rel="stylesheet" href="style.css" />
     <script type="text/javascript" src="jquery-3.0.0.js"></script>
 </head>
+<!-- Header-->
+<header>
+
+    <body>
+        <h2>
+            <center>Amrit's Electrical Services</center>
+        </h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </body>
+</header>
+<!-- Header end-->
 
 <body class="center">
     <h1>My Story</h1>
@@ -20,11 +37,21 @@
             Here is some a semblence of my experience:
         </p>
 
-        <embed src="file_name.pdf" width="800px" height="2100px" />
+        <embed src="myResume.pdf" width="800px" height="2100px" />
 
     </div>
 
-    <script src="" async defer></script>
+    <!-- Footer-->
+    <div class="footer" class="center">
+        <p id="currentDate"></p>
+    </div>
+
+    <script>
+        //footer script
+        var d = new Date().getFullYear();
+        document.getElementById("currentDate").innerHTML = "Copyright " + d;
+    </script>
+    <!-- Footer end-->
 </body>
 
 </html>

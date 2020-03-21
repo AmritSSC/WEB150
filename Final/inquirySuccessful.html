@@ -6,16 +6,33 @@
 <head>
     <title>Form Submission</title>
 </head>
+<!-- Header-->
+<header>
 
-<body>
-    <center>
-        <h1>Your Inquiry has been received</h1>
-        <br /><br />
-        <label for="inquiryContent">Inquiry Details</label><br />
-        <textarea id="inquiryContent" rows="5" cols="50" disabled></textarea><br />
-        <br />
+    <body>
+        <h2>
+            <center>Amrit's Electrical Services</center>
+        </h2>
 
-    </center>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </body>
+</header>
+<!-- Header end-->
+
+<body class="center">
+
+    <h1>Your Inquiry has been received</h1>
+    <br /><br />
+    <label for="inquiryContent">Inquiry Details</label><br />
+    <textarea id="inquiryContent" rows="5" cols="50" disabled></textarea><br />
+    <br />
+
+
     <script>
         //            window.onload = alert(localStorage.getItem("inquiryDetails"));
         var inquirtyData = localStorage.getItem("inquiryDetails");
@@ -32,7 +49,17 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <script src="" async defer></script>
+    <!-- Footer-->
+    <div class="footer" class="center">
+        <p id="currentDate"></p>
+    </div>
+
+    <script>
+        //footer script
+        var d = new Date().getFullYear();
+        document.getElementById("currentDate").innerHTML = "Copyright " + d;
+    </script>
+    <!-- Footer end-->
 </body>
 
 </html>

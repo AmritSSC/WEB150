@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html class="no-js">
+<!--<![endif]-->
+<!DOCTYPE html>
+
+<!-- Header-->
+<header>
+    <link rel="stylesheet" href="style.css" />
+
+    <body>
+        <h2 class="center">
+            Amrit's Electrical Services
+        </h2>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </body>
+</header>
+<!-- Header end-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Products</title>
+</head>
+
+<body>
+    <br/><br/><br/><br/><br/><br/><br/>
+    <h1 id="productInfo" class="center">
+        No products at this time
+    </h1> <br/><br/><br/><br/>
+    <h2 id="contacMsg" class="center">
+        Contact us for custom solutions!
+    </h2>
+    <!-- Footer-->
+    <div class="footer" class="center">
+        <p id="currentDate"></p>
+    </div>
+
+    <script>
+        //footer script
+        var d = new Date().getFullYear();
+        document.getElementById("currentDate").innerHTML = "Copyright " + d;
+    </script>
+    <!-- Footer end-->
+</body>
+
+<script>
+    var updatePic = setInterval(changeClr, 1);
+    var i = 250,
+        j = 250,
+        k = 250;
+
+    var track1 = track2 = track3 = 0;
+
+    function changeClr() {
+
+        switch (track1) {
+            case 0:
+                if ((i == 250) && (j == 250)) {
+                    if (k > 0)
+                        k -= 10;
+                    else {
+                        track1 = 1;
+                        k = 250;
+                    }
+                }
+                break;
+            case 1:
+                if ((i == 250)) {
+                    if (j > 0)
+                        if (k > 0)
+                            k -= 10;
+                        else {
+                            j -= 10;
+                            k = 250;
+                        }
+                    else {
+                        track1 = 2;
+                        j = 250;
+                        k = 250;
+                    }
+                }
+                break;
+            case 2:
+                if ((i > 0)) {
+                    if (j > 0) {
+                        if (k > 0)
+                            k -= 10;
+                        else {
+                            j -= 10;
+                            k = 250;
+                        }
+                    } else {
+                        i -= 10;
+                        j = 250;
+                        k = 250;
+                    }
+
+                } else {
+                    track1 = 0;
+                    i = 250;
+                    j = 250;
+                    k = 250;
+                }
+                break;
+        }
+
+        // if (i > 0)
+        //     i--;
+        // else
+        //     i = 250;
+
+        document.getElementById("contacMsg").style.color = "rgb(" + i + ", " + j + ", " + k + ")";
+        document.getElementById("productInfo").style.color = "rgb(" + k + ", " + j + ", " + i + ")";
+    }
+</script>
+
+</html>
