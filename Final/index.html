@@ -56,6 +56,17 @@
     var siteImage = [];
     siteImage[0] = "images/mypic.jpg";
     siteImage[1] = "images/mypic2.jpg";
+    siteImage[2] = "images/mypic3.jpg";
+    siteImage[3] = "images/mypic4.jpg";
+    siteImage[4] = "images/mypic5.jpg";
+    siteImage[5] = "images/mypic6.jpg";
+    var siteAlt = [];
+    siteAlt[0] = "soldering away";
+    siteAlt[1] = "workspace";
+    siteAlt[2] = "a prototype design";
+    siteAlt[3] = "analog output of test design";
+    siteAlt[4] = "test output: messy triangle wave";
+    siteAlt[5] = "test output: very noisy sine wave";
 
     var i = 0;
 
@@ -69,6 +80,7 @@
             i = 0;
         }
         document.getElementById("myImg").setAttribute('src', siteImage[i]);
+        document.getElementById("myImg").setAttribute('alt', siteAlt[i]);
     }
 </script>
 
