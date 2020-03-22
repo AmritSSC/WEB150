@@ -66,41 +66,71 @@
 
 </head>
 
-<body>
-    <h1 class="center">Our Services</h1>
-    <br/><br/>
-    <div id="content" class="center">
-        <div id="service1" class="text">Product Consultations <br/>
-            <p class="sericeDesc">Have an idea for a electrical product? Need to figure out the technical requirements in getting it made? We can help!</p>
-        </div>
-        <br />
-        <div id="service2" class="text">Prototype Design
-            <p class="sericeDesc">Do you have a electrical product you need? We can help you with prototyping it for you.</p>
-        </div>
-        <br />
-        <div id="service3" class="text">Troubleshooting
-            <p class="sericeDesc">Is your electrical device giving you problems? We understand some items are irreplaceable, so let us help you. </p>
-        </div>
-        <br />
-        <div id="service4" class="text">Electronic Design and SolderingTutorial
-            <p class="sericeDesc">Do you want to learn the basics of electrical or electronic design? Is soldering a skill you would like to have? Our courses are designed for those beginning their electronic design hobby.</p>
-        </div>
-        <br /><br />
-    </div>
+<body class="center">
+    <br />
+    <h1>Our Services</h1>
+    <br/>
 
-    <div class="center">
-        <h2>Enter details for your inquiry:</h2><br />
-        <label for="custName">Enter your name: </label>
-        <input id="custName" type="text" required/><br />
-        <br />
-        <label for="custEmail">Enter your email: </label>
-        <input id="custEmail" type="email" required/><br />
-        <br />
-        <label for="custMessage">Describe your requirements</label><br />
-        <textarea id="custMessage" rows="5" cols="50" required></textarea><br />
-        <br />
-        <input id="submit" onclick="submitQuery()" type="button" value="Submit Inquiry"> </input>
-    </div>
+    <form class="cmxform" id="commentForm" method="post" action="javascript:submitQuery();">
+        <fieldset>
+            <div id="service1" class="text">Product Consultations <br/>
+                <p class="sericeDesc">Have an idea for a electrical product? Need to figure out the technical requirements in getting it made? We can help!</p>
+            </div>
+            <br />
+            <div id="service2" class="text">Prototype Design
+                <p class="sericeDesc">Do you have a electrical product you need? We can help you with prototyping it for you.</p>
+            </div>
+            <br />
+            <div id="service3" class="text">Troubleshooting
+                <p class="sericeDesc">Is your electrical device giving you problems? We understand some items are irreplaceable, so let us help you. </p>
+            </div>
+            <br />
+            <div id="service4" class="text">Electronic Design and SolderingTutorial
+                <p class="sericeDesc">Do you want to learn the basics of electrical or electronic design? Is soldering a skill you would like to have? Our courses are designed for those beginning their electronic design hobby.</p>
+            </div>
+            <br /><br />
+            </div>
+
+            <h2>Enter details for your inquiry:</h2>
+            <p>
+                <label for="custName">Name</label>
+                <input id="custName" name="custName" type="text" required>
+            </p>
+            <p>
+                <label for="custEmail">E-Mail</label>
+                <input id="custEmail" type="email" name="custEmail" required>
+            </p>
+
+            <p>
+                <label for="custMessage">Your comment</label>
+                <textarea id="custMessage" name="custMessage" rows="5" cols="50" required></textarea>
+            </p>
+            <p>
+                <input class="submit" type="submit" value="Submit">
+            </p>
+
+
+        </fieldset>
+    </form>
+
+
+    <script src="" async defer></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $("#commentForm").validate();
+    </script>
+
+    <script src="" async defer></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $("#commentForm").validate();
+    </script>
 
     <!-- Footer-->
     <div class="footer" class="center">
@@ -124,12 +154,6 @@
         var customerEmail = document.getElementById("custEmail").value;
         var customerMessage = document.getElementById("custMessage").value;
 
-
-        // localStorage.setItem("serviceSelect1", serviceSelect);
-        // localStorage.setItem("customerName1", customerName);
-        // localStorage.setItem("custEmail1", custEmail);
-        // localStorage.setItem("custMessage1", custMessage);
-
         var inquiryDetails = [];
         inquiryDetails[0] = serviceSelect;
         inquiryDetails[1] = customerName;
@@ -142,19 +166,14 @@
 
         //window.localStorage.setItem('inquiryDetails', JSON.stringify(inquiryDetails));
         localStorage.setItem("inquiryDetails", inquiryDetails);
-        //    localStorage.setItem("inquiryDetails", JSON.stringify(inquiryDetails));
-        // if (typeof(Storage) !== "undefined") {
-        //     // Store
-        //     localStorage.setItem("inquiryDetails", inquiryDetails);
-        //     // Retrieve
-        //     //document.getElementById("result").innerHTML = localStorage.getItem("lastname");
-        // } else {
-        //     alert("Sorry, your browser does not support Web Storage...");
-        // }
+
 
         // show submission success page:
         document.location.href = "inquirySuccessful.html";
     }
 </script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
 
 </html>

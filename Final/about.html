@@ -26,6 +26,13 @@
     </body>
 </header>
 <!-- Header end-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function() {
+        $("#accordion").accordion();
+    });
+</script>
 
 <body class="center">
     <h1>My Story</h1>
@@ -37,7 +44,28 @@
             Here is some a semblence of my experience:
         </p>
 
-        <embed id="pdfWindow" src="the_little_prince.pdf" width="800px" height="2100px" />
+    </div>
+
+    <div id="accordion" class="center">
+        <h3>Some of my experiences</h3>
+        <div>
+            <p>
+                <embed id="pdfWindow" src="the_little_prince.pdf" width="800px" height="600px" />
+            </p>
+        </div>
+        <h3>A pic of me working</h3>
+        <div>
+            <p>
+                <img id="myImg" src="images/mypic.jpg" alt="Nothing to see here today." width="25%" height="25%" />
+            </p>
+        </div>
+        <!-- Doesn't show last div without this!! Don't know why-->
+        <h3>A paper I wrote</h3>
+        <div>
+            <p>
+                Not available at the moment
+            </p>
+        </div>
 
     </div>
 
@@ -53,6 +81,7 @@
     </script>
     <!-- Footer end-->
 </body>
+
 <script type="text/javascript">
     $("document").ready(function() {
         //use the find function to locate content within particular elements

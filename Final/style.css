@@ -7,6 +7,7 @@ body {
     font-size: 12pt;
     margin: 0;
     line-height: 1.2em;
+    overflow: scroll;
 }
 
 
@@ -113,7 +114,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #333333;
 }
 
