@@ -35,17 +35,16 @@
 
 
     <script>
-        //            window.onload = alert(localStorage.getItem("inquiryDetails"));
-        var inquirtyData = localStorage.getItem("inquiryDetails");
-        document.getElementById("inquiryContent").innerHTML = inquirtyData;
-        // for (var i; i < inquirtyData.length; i++) {
-        //     document.getElementById("inquiryContent").innerHTML += inquirtyData[i];
-        // }
-        // document.getElementById("custRequest").innerHTML = localStorage.getItem("serviceSelect1");
-        // document.getElementById("custName").innerHTML = localStorage.getItem("customerName1");
-        // document.getElementById("custEmail").innerHTML = localStorage.getItem("custEmail1");
-        // document.getElementById("custMessage").innerHTML = localStorage.getItem("custMessage1");
+        //            window.onload = alert(localStorage.getItem("inquiryDetails"))
+        // return value of submitted fields:
+        var inquirtyData = JSON.parse(localStorage.getItem("inquiryDetails"));
+        for (var i = 0; i < inquirtyData.length; i++)
+            document.getElementById("inquiryContent").innerHTML += inquirtyData[i] + '\n';
+
+        // var inquirtyData = localStorage.getItem("inquiryDetails");
+        // document.getElementById("inquiryContent").innerHTML = inquirtyData;
     </script>
+
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->

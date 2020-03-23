@@ -73,7 +73,7 @@
 
     <form class="cmxform" id="commentForm" method="post" action="javascript:submitQuery();">
         <fieldset>
-            <div id="service1" class="text">Product Consultations <br/>
+            <div id="service1" class="text">Product Consultations
                 <p class="sericeDesc">Have an idea for a electrical product? Need to figure out the technical requirements in getting it made? We can help!</p>
             </div>
             <br />
@@ -165,9 +165,10 @@
 
 
         //window.localStorage.setItem('inquiryDetails', JSON.stringify(inquiryDetails));
-        localStorage.setItem("inquiryDetails", inquiryDetails);
+        //set data as string value in array:
+        localStorage.setItem("inquiryDetails", JSON.stringify(inquiryDetails));
 
-
+        //console.log(localStorage.inquiryDetails[0]);
         // show submission success page:
         document.location.href = "inquirySuccessful.html";
     }
